@@ -1,3 +1,5 @@
+"use client";
+
 import Logo from "@/app/assets/logo.svg";
 import XSocial from "@/app/assets/social-x.svg";
 import InstaSocial from "@/app/assets/social-instagram.svg";

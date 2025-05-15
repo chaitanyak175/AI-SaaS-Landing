@@ -1,3 +1,5 @@
+"use client";
+
 import LogoIcon from "@/app/assets/logo.svg";
 import MenuIcon from "@/app/assets/icon-menu.svg";
 import { Button } from "../components/buttons";

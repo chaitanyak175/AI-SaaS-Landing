@@ -1,3 +1,5 @@
+"use client";
+
 import acmeLogo from "@/app/assets/logo-acme.png";
 import apexLogo from "@/app/assets/logo-apex.png";
 import celestialLogo from "@/app/assets/logo-celestial.png";
@@ -5,6 +7,7 @@ import quantumLogo from "@/app/assets/logo-quantum.png";
 import pulseLogo from "@/app/assets/logo-pulse.png";
 import echoLogo from "@/app/assets/logo-echo.png";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export const LogoTicker = () => {
     return (
@@ -14,8 +17,21 @@ export const LogoTicker = () => {
                     <div className="flex-1 md:flex-none">
                         <h2>Trusted by top innovative teams</h2>
                     </div>
-                    <div className="flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-                        <div className="flex flex-none gap-14">
+                    <div className="flex flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+                        <motion.div
+                            initial={{
+                                translateX: "-50%",
+                            }}
+                            animate={{
+                                translateX: "0",
+                            }}
+                            transition={{
+                                repeat: Infinity,
+                                duration: 30,
+                                ease: "linear",
+                            }}
+                            className="flex flex-none gap-14 pr-14"
+                        >
                             {[
                                 acmeLogo,
                                 apexLogo,
@@ -23,15 +39,21 @@ export const LogoTicker = () => {
                                 quantumLogo,
                                 pulseLogo,
                                 echoLogo,
-                            ].map((logo) => (
+                                acmeLogo,
+                                apexLogo,
+                                celestialLogo,
+                                quantumLogo,
+                                pulseLogo,
+                                echoLogo,
+                            ].map((logo, index) => (
                                 <Image
                                     src={logo}
                                     alt="logo"
-                                    key={logo.src}
+                                    key={index}
                                     className="h-6 w-auto"
                                 />
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
