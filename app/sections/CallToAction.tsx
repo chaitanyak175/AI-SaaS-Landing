@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "../components/buttons";
-import starsBg from "@/app/assets/stars.png";
-import gridLines from "@/app/assets/grid-lines.png";
+import starsBg from "../assets/stars.png";
+import gridLines from "../assets/grid-lines.png";
 import {
     motion,
     useMotionTemplate,

@@ -1,7 +1,7 @@
 "use client";
 
-import LogoIcon from "@/app/assets/logo.svg";
-import MenuIcon from "@/app/assets/icon-menu.svg";
+import LogoIcon from "../assets/logo.svg";
+import MenuIcon from "../assets/icon-menu.svg";
 import { Button } from "../components/buttons";
 
 export const Header = () => {

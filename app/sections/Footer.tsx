@@ -1,9 +1,9 @@
 "use client";
 
-import Logo from "@/app/assets/logo.svg";
-import XSocial from "@/app/assets/social-x.svg";
-import InstaSocial from "@/app/assets/social-instagram.svg";
-import YTSocial from "@/app/assets/social-youtube.svg";
+import Logo from "../assets/logo.svg";
+import XSocial from "../assets/social-x.svg";
+import InstaSocial from "../assets/social-instagram.svg";
+import YTSocial from "../assets/social-youtube.svg";
 
 export const Footer = () => {
     return (

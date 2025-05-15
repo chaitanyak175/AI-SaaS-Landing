@@ -1,6 +1,6 @@
 "use client";
 
-import productImage from "@/app/assets/product-image.png";
+import productImage from "../assets/product-image.png";
 import { DotLottie, DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { animate } from "motion";
 import {

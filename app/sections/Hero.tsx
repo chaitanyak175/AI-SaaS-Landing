@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { Button } from "../components/buttons";
-import starBg from "@/app/assets/stars.png";
+import starBg from "../assets/stars.png";
 import { useRef } from "react";
 
 export const Hero = () => {

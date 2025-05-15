@@ -1,11 +1,11 @@
 "use client";
 
-import acmeLogo from "@/app/assets/logo-acme.png";
-import apexLogo from "@/app/assets/logo-apex.png";
-import celestialLogo from "@/app/assets/logo-celestial.png";
-import quantumLogo from "@/app/assets/logo-quantum.png";
-import pulseLogo from "@/app/assets/logo-pulse.png";
-import echoLogo from "@/app/assets/logo-echo.png";
+import acmeLogo from "../assets/logo-acme.png";
+import apexLogo from "../assets/logo-apex.png";
+import celestialLogo from "../assets/logo-celestial.png";
+import quantumLogo from "../assets/logo-quantum.png";
+import pulseLogo from "../assets/logo-pulse.png";
+import echoLogo from "../assets/logo-echo.png";
 import Image from "next/image";
 import { motion } from "motion/react";
 
