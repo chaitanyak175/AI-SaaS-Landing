@@ -1,32 +1,22 @@
-import type { NextConfig } from "next";
+// next.config.ts or next.config.js
+const nextConfig = {
+    webpack(config: any) {
+        // Exclude svg from default file loader
+        const fileLoaderRule = config.module.rules.find((rule: any) =>
+            rule.test?.test?.(".svg")
+        );
+        if (fileLoaderRule) {
+            fileLoaderRule.exclude = /\.svg$/i;
+        }
 
-const nextConfig: NextConfig = {
-    /* config options here */
+        // Add SVGR
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: ["@svgr/webpack"],
+        });
 
-    typescript: {
-        // !! WARN !!
-        // Dangerously allow production builds to successfully complete even if
-        // your project has type errors.
-        // !! WARN !!
-        ignoreBuildErrors: true,
-    },
-
-    // To also ignore ESLint errors during build, add:
-    eslint: {
-        // Warning: This allows production builds to successfully complete even if
-        // your project has ESLint errors.
-        ignoreDuringBuilds: true,
-    },
-
-    reactStrictMode: false,
-
-    turbopack: {
-        rules: {
-            "*.svg": {
-                loaders: ["@svgr/webpack"],
-                as: "*.js",
-            },
-        },
+        return config;
     },
 };
 

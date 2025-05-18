@@ -9,7 +9,7 @@ import echoLogo from "../assets/logo-echo.png";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-export const LogoTicker = () => {
+export default function LogoTicker() {
     return (
         <section className="py-20 md:py-24">
             <div className="container">
@@ -59,4 +59,4 @@ export const LogoTicker = () => {
             </div>
         </section>
     );
-};
+}

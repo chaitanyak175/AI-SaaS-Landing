@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../components/buttons";
+import Button from "../components/buttons";
 import starsBg from "../assets/stars.png";
 import gridLines from "../assets/grid-lines.png";
 import {
@@ -37,7 +37,7 @@ const useRelativeMousePosition = (
     return [mouseX, mouseY];
 };
 
-export const CallToAction = () => {
+export default function CallToAction() {
     const sectionRef = useRef<HTMLElement>(null);
 
     const borderedDivRef = useRef<HTMLDivElement>(null);
@@ -105,4 +105,4 @@ export const CallToAction = () => {
             </div>
         </section>
     );
-};
+}

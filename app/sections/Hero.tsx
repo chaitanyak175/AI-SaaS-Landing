@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "motion/react";
-import { Button } from "../components/buttons";
+import Button from "../components/buttons";
 import starBg from "../assets/stars.png";
 import { useRef } from "react";
 
-export const Hero = () => {
+export default function Hero() {
     const sectionRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -119,4 +119,4 @@ export const Hero = () => {
             </div>
         </motion.section>
     );
-};
+}

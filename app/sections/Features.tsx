@@ -133,7 +133,7 @@ const FeatureFab = (
     );
 };
 
-export const Features = () => {
+export default function Features() {
     const [selectedTab, setselectedTab] = useState(0);
 
     const backgroundPositionX = useMotionValue(tabs[0].backgroundPositionX);
@@ -203,4 +203,4 @@ export const Features = () => {
             </div>
         </section>
     );
-};
+}

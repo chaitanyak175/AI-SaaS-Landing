@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Button = (props: React.PropsWithChildren) => {
+export default function Button(props: React.PropsWithChildren) {
     return (
         <button className="relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#190D2E] to-[#4A208E] shadow-[0px_0px_12px_#8C45FF] cursor-pointer">
             <div className="absolute inset-0">
@@ -11,4 +11,4 @@ export const Button = (props: React.PropsWithChildren) => {
             <span className="">{props.children}</span>
         </button>
     );
-};
+}
