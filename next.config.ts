@@ -1,22 +1,29 @@
-// next.config.ts or next.config.js
-const nextConfig = {
-    webpack(config: any) {
-        // Exclude svg from default file loader
-        const fileLoaderRule = config.module.rules.find((rule: any) =>
-            rule.test?.test?.(".svg")
-        );
-        if (fileLoaderRule) {
-            fileLoaderRule.exclude = /\.svg$/i;
-        }
+import type { NextConfig } from "next";
 
-        // Add SVGR
+const nextConfig: NextConfig = {
+    /* config options here */
+    webpack(config) {
         config.module.rules.push({
-            test: /\.svg$/i,
-            issuer: /\.[jt]sx?$/,
-            use: ["@svgr/webpack"],
+            test: /\.svg$/,
+            use: [
+                {
+                    loader: "@svgr/webpack",
+                    options: {
+                        icon: true,
+                    },
+                },
+            ],
         });
-
         return config;
+    },
+
+    turbopack: {
+        rules: {
+            "*.svg": {
+                loaders: ["@svgr/webpack"],
+                as: "*.js",
+            },
+        },
     },
 };
 
